@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function toggleForm(userType) {
+            var donorForm = document.getElementById("donorForm");
+            var hospitalForm = document.getElementById("hospitalForm");
+    
+            if (userType === "donor") {
+                donorForm.style.display = "block";
+                hospitalForm.style.display = "none";
+            } else if (userType === "hospital") {
+                donorForm.style.display = "none";
+                hospitalForm.style.display = "block";
+            }
+        }
+    
+        function signIn() {
+            var userType = document.querySelector("select").value;
+            var username = document.querySelector("#donorForm input[name='username']").value;
+            var hospitalName = document.querySelector("#hospitalForm input[name='hospitalName']").value;
+    
+            if (userType === "donor") {
+                // Redirect to donor.html
+                console.log("Signing in as a donor...");
+                alert("You're signed in as a donor");
+                window.location.href = "donor.html";
+            } else if (userType === "hospital") {
+                // Redirect to hospital.html
+                console.log("Signing in as a hospital...");
+                alert("You're signed in as a hospital");
+                window.location.href = "hospital.html";
+            }
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div class="bg-container">
+
+
+        <div class="form-banner">
+            <div class="nav1">
+                <div class="navbar">
+                    <img src="logo.jpg" class="logo" />
+                    <h1>BloodLink</h1>
+                    <ul>
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="about.html"> About</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="formcontainer">
+                    <div class="app-wrapper">
+                        <div>
+                            <h2>Sign In</h2>
+                        </div>
+                        <div>
+                            <label>Select User Type:</label>
+                            <select onchange="toggleForm(this.value)">
+                                <option value="donor">Donor</option>
+                                <option value="hospital">Hospital</option>
+                            </select>
+                        </div>
+                        <!-- Donor Sign-in Form -->
+                        <form id="donorForm" class="form-wrapper">
+                            <div class="form-field">
+                                <label>Username</label>
+                                <br>
+                                <input class="input" type="text" name="username" value="">
+                            </div>
+                            <div class="form-field">
+                                <label>Email</label>
+                                <br>
+                                <input class="input" type="text" name="email" value="">
+                            </div>
+                            <div class="form-field">
+                                <label>Password</label>
+                                <br>
+                                <input class="input" type="password" name="password" value="">
+                            </div>
+                            <div>
+                                <button class="submit" onclick="signIn()">Sign In</button>
+                            </div>
+                        </form>
+                        <!-- Hospital Sign-in Form -->
+                        <form id="hospitalForm" class="form-wrapper" style="display: none;">
+                            <div class="form-field">
+                                <label>Hospital Name</label>
+                                <br>
+                                <input class="input" type="text" name="hospitalName" value="">
+                            </div>
+                            <div class="form-field">
+                                <label>Password</label>
+                                <br>
+                                <input class="input" type="password" name="password" value="">
+                            </div>
+                            <div>
+                                <button class="submit" onclick="signIn()">Sign In</button>
+                            </div>
+                        </form>
+
+                        <p class="bottom-text">Don't have an account? Sign up <a href="signup.html">here!</a></p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

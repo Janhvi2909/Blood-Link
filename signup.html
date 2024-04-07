@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background: url('https://i.pinimg.com/originals/83/ba/7a/83ba7a433c56e465f732aeff379ecedb.jpg');
+            background-size: cover;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+        }
+        .form-group input:focus {
+            outline: none;
+            box-shadow: 0 0 5px #fff;
+        }
+        .form-group input[type="submit"] {
+            background-color: #444;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #666;
+        }
+        .hospital-form,
+        .donor-form {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+            <label for="userType">Select User Type:</label>
+            <select id="userType">
+                <option value="donor">Donor</option>
+                <option value="hospital">Hospital</option>
+            </select>
+        </div>
+        
+        <div class="donor-form">
+            <form id="donorForm">
+                <!-- Donor form fields -->
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign Up as Donor">
+                </div>
+            </form>
+        </div>
+        
+        <div class="hospital-form">
+            <form id="hospitalForm">
+                <!-- Hospital form fields -->
+                <div class="form-group">
+                    <label for="hospitalName">Hospital Name:</label>
+                    <input type="text" id="hospitalName" name="hospitalName" required>
+                </div>
+                <div class="form-group">
+                    <label for="licenseNumber">Medical License Number:</label>
+                    <input type="text" id="licenseNumber" name="licenseNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="passwordHospital">Password:</label>
+                    <input type="password" id="passwordHospital" name="passwordHospital" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign Up as Hospital">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("userType").addEventListener("change", function() {
+            var userType = this.value;
+            if (userType === "donor") {
+                document.querySelector(".donor-form").style.display = "block";
+                document.querySelector(".hospital-form").style.display = "none";
+            } else if (userType === "hospital") {
+                document.querySelector(".donor-form").style.display = "none";
+                document.querySelector(".hospital-form").style.display = "block";
+            }
+        });
+
+        // Add event listener to form submission
+        document.getElementById("donorForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            // You can add validation here if needed
+            alert("Registered successfully"); // Display alert
+            window.location.href = "signin.html"; // Redirect to signin.html
+        });
+
+        document.getElementById("hospitalForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            // You can add validation here if needed
+            alert("Registered successfully"); // Display alert
+            window.location.href = "signin.html"; // Redirect to signin.html
+        });
+    </script>
+</body>
+</html>

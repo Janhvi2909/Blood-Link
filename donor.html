@@ -1,0 +1,305 @@
+
+
+       <!DOCTYPE html>
+       <html lang="en">
+       
+       <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Blood For All</title>
+           <link rel="stylesheet" href="style.css" />
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+               integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+               crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+           <style>
+               /* New CSS for the sidebar */
+               .sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 200px; /* Adjust top padding to avoid overlapping with navbar */
+    overflow-y: auto; /* Enable vertical scroll for sidebar content */
+}
+       
+               .sidebar ul {
+                   list-style-type: none;
+                   padding: 50;
+                   margin: 50;
+               }
+       
+               .sidebar ul li {
+                   padding: 40px;
+                   text-align: center;
+               }
+       
+               .sidebar ul li a {
+                   text-decoration: none;
+                   color: #fff;
+                   font-size: 18px;
+               }
+       
+               .sidebar ul li a:hover {
+                   background-color: #555;
+               }
+               .content {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-left: 250px; /* Adjust margin to align with sidebar width */
+    padding-top: 200px; /* Adjust top padding to avoid overlapping with navbar */
+    /* position: fixed; */
+    position: relative;
+      overflow: hidden;
+      margin: ;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+      overflow: hidden;
+
+}
+
+.grid-item h2 {
+    color: #9a0000; /* Red color for headings */
+}
+
+.grid-item p {
+    margin-top: 10px;
+    color: #555;
+}
+
+
+           </style>
+       </head>
+       
+       <body>
+           <div class="sidebar">
+               <ul>
+                   <li><a href="#">Requests</a></li>
+                   <li><a href="#">Verification</a></li>
+                   <li><a href="#">Medical Footprints</a></li>
+                   <li><a href="#">Vouchers</a></li>
+                   <li><a href="#">Settings</a></li>
+               </ul>
+           </div>
+       
+           <div class="banner">
+               <div class="nav1">
+                   <div class="navbar">
+                       <img src="logo.jpg" class="logo" />
+                       <h1>BloodLink</h1>
+                       <ul>
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="about.html">About</a></li>
+                           <li><a href="index.html">Log Out</a></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+           <div class="content">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h2>My Blood Group</h2>
+                    <p>AB+</p>
+                </div>
+                <div class="grid-item">
+                    <h2>Last Check-up</h2>
+                    <p>March 25, 2024</p>
+                </div>
+                <div class="grid-item">
+                    <h2>Last Donation Date</h2>
+                    <p>February 10, 2024</p>
+                </div>
+                <div class="grid-item">
+                    <h2>Show Bawana</h2>
+                    <p>Yes</p>
+                </div>
+            </div>
+        </div>
+       </body>
+       
+       </html>
+
+
+
+
+
+
+       <!-- <!DOCTYPE html>
+       <html lang="en">
+       <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Donor Information</title>
+           <link rel="stylesheet" href="style.css">
+           <style>
+            body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e5ec; /* Greyish-blue background */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #9a0000; /* Red navbar */
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 200px; /* Adjust top padding to avoid overlapping with navbar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 50;
+    margin: 50;
+}
+
+.sidebar ul li {
+    padding: 40px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.banner {
+    background-color: #fff; /* White background for banner */
+}
+
+.navbar {
+    background-color: #9a0000; /* Red navbar */
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h2 {
+    color: #9a0000; /* Red color for headings */
+}
+
+.grid-item p {
+    margin-top: 10px;
+    color: #555;
+}
+
+
+           </style>
+       </head>
+       <body>
+           <div class="container">
+               <div class="sidebar">
+                   <ul>
+                       <li><a href="#">Requests</a></li>
+                       <li><a href="#">Verification</a></li>
+                       <li><a href="#">Medical Footprints</a></li>
+                       <li><a href="#">Vouchers</a></li>
+                       <li><a href="#">Settings</a></li>
+                   </ul>
+               </div>
+       
+               <div class="banner">
+                   <div class="nav1">
+                       <div class="navbar">
+                           <img src="logo.jpg" class="logo" />
+                           <h1>BloodLink</h1>
+                           <ul>
+                               <li><a href="index.html">Home</a></li>
+                               <li><a href="about.html">About</a></li>
+                               <li><a href="index.html">Log Out</a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+       
+               <div class="content">
+                   <div class="grid-container">
+                       <div class="grid-item">
+                           <h2>My Blood Group</h2>
+                           <p>AB+</p>
+                       </div>
+                       <div class="grid-item">
+                           <h2>Last Check-up</h2>
+                           <p>March 25, 2024</p>
+                       </div>
+                       <div class="grid-item">
+                           <h2>Last Donation Date</h2>
+                           <p>February 10, 2024</p>
+                       </div>
+                       <div class="grid-item">
+                           <h2>Show Bawana</h2>
+                           <p>Yes</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </body>
+       </html>
+        -->
+
+
+
+
+
+
